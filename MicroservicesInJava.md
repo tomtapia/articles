@@ -367,7 +367,7 @@ class EdgeService {
 }
 ```
 
-## DISTRIBUTED TRACING
+## Distributed tracing
 
 It is difficult to reason about a microservice system with REST-based, messaging-based, and proxy-based egress and ingress points. How
 do you trace (correlate) requests across a series of services and understand where something has failed? This is difficult enough
@@ -377,13 +377,13 @@ the trace collection infrastructure and a UI in which you can view waterfall gra
 and trace-specific information. Spring Cloud Sleuth provides an abstraction around the concepts of distributed tracing. Spring Cloud
 Sleuth automatically traces common ingress and egress points in the system. Spring Cloud Zipkin integrates Twitter Zipkin in terms of the Spring Cloud Sleuth abstraction.
 
-## SINGLE SIGN-ON AND SECURITY
+## Single sign-on and security
 
 Security describes authentication, authorization and-often-which client is being used to make a request. OAuth and OpenID Connect are very popular on the open web, and SAML rules the enterprise.
 
 OAuth 2.0 provides explicit integration with SAML. API gateway tools like [Apigee](http://apigee.com/) and SaaS identity providers like [Okta](https://www.okta.com/) can act as a secure meta-directory, exposing OAuth endpoints (for example) and connecting the backend to more traditional identity providers like Active Directory, Office365, Salesforce, and LDAP. [Spring Security OAuth](http://projects.spring.io/spring-security-oauth/) and RedHat’s KeyCloak are open-source OAuth and OpenID Connect servers. Whatever your choice of identity provider, it should be trivial to authenticate and authorize clients. Spring Security, Apache Shiro, Nimbus, and Pac4J all provide convenient OAuth clients. Spring Cloud Security can lock down microservces, rejecting un-authenticated requests. It can also propagate authentication contexts from one microservice to another. Frameworks like JHipster integrate Spring’s OAuth support.
 
-## A CLOUD NATIVE ARCHITECTURE IS AN AGILE ARCHITECTURE
+## A cloud native architecture is an agile architecture
 
 Systems must optimize for time-to-remediation; when a service goes down, how quickly can the system replace it? If time-to-remediation is 0 seconds, then the system is (effectively) 100% highly available. The apparent appearance of the system is the same in a single-node service that is 100% highly available, but it has profound impacts on the architecture of the system. The patterns we’ve looked at in this
 Refcard support building systems that are tolerant of failure and service topology changes common in a dynamic cloud environment.
